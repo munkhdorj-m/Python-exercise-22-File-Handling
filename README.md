@@ -17,7 +17,7 @@ Write a program that reads the file and prints its content.
 
 **Example**
 
-   	Inside story.txt: "This file can have anything"
+      Inside story.txt: "This file can have anything"<br/>
       Output: "This file can have anything"
 
 ---
@@ -44,8 +44,8 @@ Write a program that reads a text file and prints the number of words in it.
 
 **Example**
 
-   	Inside sample.txt: "How many words are in here?"
-    Output: 6
+      Inside sample.txt: "How many words are in here?"<br/>
+      Output: 6
 
 ---
 
@@ -57,7 +57,7 @@ Write a program that reads a file and prints the longest word.
 
  
 **Example**
-
-   	Inside sample.txt: "What's the longest word in here?"
+      
+      Inside sample.txt: "What's the longest word in here?"<br/>
       Output: "longest"
 ---
