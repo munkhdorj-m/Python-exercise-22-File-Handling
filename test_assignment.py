@@ -31,7 +31,7 @@ def test2(filename, name, age):
 
 @pytest.mark.parametrize("filename, content, expected_count", [
     ("test_words.txt", "Hello world!", 2),
-    ("test_words2.txt", "This is a test file with multiple words.", 7),
+    ("test_words2.txt", "This is a test file with multiple words.", 8),
     ("empty.txt", "", 0)
 ])
 def test3(filename, content, expected_count):
