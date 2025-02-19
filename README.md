@@ -18,6 +18,7 @@ Write a program that reads the file and prints its content.
 **Example**
 
    	Inside story.txt: "This file can have anything"
+      Output: "This file can have anything"
 
 ---
 
@@ -58,5 +59,5 @@ Write a program that reads a file and prints the longest word.
 **Example**
 
    	Inside sample.txt: "What's the longest word in here?"
-    Output: "longest"
+      Output: "longest"
 ---
