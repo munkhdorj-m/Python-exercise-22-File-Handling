@@ -1,39 +1,60 @@
 import pytest
 import inspect
-from assignment import extract_emails, mask_credit_card_numbers, find_duplicate_characters
+from assignment import (
+    create_and_read_file,
+    write_user_info,
+    count_words_in_file,
+    find_longest_word_in_file
+)
 
 def check_contains_loop(function):
     source = inspect.getsource(function)
     return 'for' in source or 'while' in source
 
-@pytest.mark.parametrize("input, expected", [
-    ("Contact us at support@example.com or admin@example.org", ["support@example.com", "admin@example.org"]),
-    ("No emails here!", []),
-    ("My email is staff@example.com", ["staff@example.com"]),
-    ("Reach out: john.doe@mail.com and jane_doe123@workplace.org", ["john.doe@mail.com", "jane_doe123@workplace.org"]),
-    ("", [])
+@pytest.mark.parametrize("filename, content", [
+    ("test_story.txt", "Once upon a time in a faraway land."),
+    ("test_story2.txt", "Python is a powerful programming language."),
 ])
-def test1(input, expected):
-    assert extract_emails(input) == expected
-    assert check_contains_loop(extract_emails)
+def test1(filename, content):
+    with open(filename, "w") as f:
+        f.write(content)
+    
+    assert create_and_read_file(filename) is None  # Assuming it prints content but returns nothing
+    assert check_contains_loop(create_and_read_file)
 
-@pytest.mark.parametrize("input, expected", [
-    ("My credit card is 1234567812345678", "****-****-****-5678"),
-    ("No card here.", ""),
-    ("My card number is 9988776612347869", "****-****-****-7869"),
-    ("", "")
+@pytest.mark.parametrize("filename, name, age", [
+    ("test_user1.txt", "Alice", 25),
+    ("test_user2.txt", "Bob", 30),
 ])
-def test2(input, expected):
-    assert mask_credit_card_numbers(input) == expected
-    assert check_contains_loop(mask_credit_card_numbers)
+def test2(filename, name, age):
+    write_user_info(filename, name, age)
+    
+    with open(filename, "r") as f:
+        content = f.read().strip()
+    
+    assert content == f"Name: {name}, Age: {age}"
+    assert check_contains_loop(write_user_info)
 
-@pytest.mark.parametrize("input, expected", [
-    ("programming", ['r', 'g', 'm']),
-    ("hello", ['l']),
-    ("abcdef", []),
-    ("aabbcc", ['a', 'b', 'c']),
-    ("", [])
+@pytest.mark.parametrize("filename, content, expected_count", [
+    ("test_words.txt", "Hello world!", 2),
+    ("test_words2.txt", "This is a test file with multiple words.", 7),
+    ("empty.txt", "", 0)
 ])
-def test3(input, expected):
-    assert find_duplicate_characters(input) == expected
-    assert check_contains_loop(find_duplicate_characters)
+def test3(filename, content, expected_count):
+    with open(filename, "w") as f:
+        f.write(content)
+    
+    assert count_words_in_file(filename) == expected_count
+    assert check_contains_loop(count_words_in_file)
+
+@pytest.mark.parametrize("filename, content, expected_word", [
+    ("test_longest.txt", "Find the longest word in this file.", "longest"),
+    ("test_longest2.txt", "Short words only.", "Short"),
+    ("empty.txt", "", "")
+])
+def test4(filename, content, expected_word):
+    with open(filename, "w") as f:
+        f.write(content)
+    
+    assert find_longest_word_in_file(filename) == expected_word
+    assert check_contains_loop(find_longest_word_in_file)
