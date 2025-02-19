@@ -27,7 +27,7 @@ def test2(filename, name, age):
     with open(filename, "r") as f:
         content = f.read().strip()
     
-    assert content.lower() == f"name: {name}, age: {age}"
+    assert content == f"name: {name}, age: {age}" or content == f"Name: {name}, Age: {age}"
 
 @pytest.mark.parametrize("filename, content, expected_count", [
     ("test_words.txt", "Hello world!", 2),
