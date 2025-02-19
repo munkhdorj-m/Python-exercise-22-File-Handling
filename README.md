@@ -10,18 +10,9 @@ https://drive.google.com/file/d/1JE02xr12iIN_EY8-slrw2Wx0KqwH00pN/view?usp=shari
 
 **Problem:**
 
-Extract email addresses from a file.
+Create a file named story.txt with some text.
+Write a program that reads the file and prints its content.
 
-**Example:**
-
-	Input: "Contact us at support@example.com or admin@example.org"  
-	Output:  ["support@example.com", "admin@example.org"]  
-	
-	Input:  "No emails here!"  
-	Output:  []  
-
- 	Input:  "My email is staff@example.com"  
-	Output:  ["staff@example.com"]  
 
 ---
 
@@ -29,18 +20,7 @@ Extract email addresses from a file.
 
 **Problem:**
 
-Mask the first 12 digits of credit card numbers in a string.
-
-**Example:**
-
-	Input: "My credit card is 1234567812345678"  
-	Output: "****-****-****-5678"  
-	
-	Input: "No card here."  
-	Output: ""   
- 
- 	Input: "My card number is 9988776612347869"  
-	Output: "****-****-****-7869"   
+Write a program that asks the user for their name and age, then writes this information to a file called user_info.txt.
 
 ---
 
@@ -48,18 +28,14 @@ Mask the first 12 digits of credit card numbers in a string.
 
 **Problem:**
 
-Find duplicate characters in a string.
-
-**Example**
-
-	Input: "programming"  
-	Output: ['r', 'g', 'm']  
-	
-	Input: "hello"  
-	Output: ['l']  
-	
-	Input: "abcdef"  
-	Output: []   
+Write a program that reads a text file and prints the number of words in it.
  
 ---
 
+## Exercise 4
+
+**Problem:**
+
+Write a program that reads a file and prints the longest word.
+ 
+---
