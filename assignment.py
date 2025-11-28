@@ -14,8 +14,3 @@ def write_user_info(filename, name, age):
 def count_words_in_file(filename):
     # Write your code here
     pass
-
-# Exercise 4
-def find_longest_word_in_file(filename):   
-    # Write your code here
-    pass
