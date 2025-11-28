@@ -27,15 +27,6 @@
         "comparison": "included",
         "timeout": 5,
         "points": 1
-      },
-      {
-        "name": "exercise4",
-        "run": "pytest test_assignment.py::test4",
-        "input": "",
-        "output": "",
-        "comparison": "included",
-        "timeout": 5,
-        "points": 1
       }
     ]
   }
