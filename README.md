@@ -11,7 +11,7 @@ https://drive.google.com/file/d/1sIv9rb6PizW9sfts9eVu0BkLYWLjysiT/view?usp=shari
 
 **Problem:**
 
-Create a file named story.txt with some text.
+Create a file that is given for example "story.txt" with some text.
 Write a program that reads the file and prints its content.
 
 
@@ -26,12 +26,12 @@ Write a program that reads the file and prints its content.
 
 **Problem:**
 
-Write a program that asks the user for their name and age, then writes this information to a file called user_info.txt.
+Write a program that asks the user for their name and age, then writes this information to a file.
 
 
 **Example**
 
-      Inside user_info.txt: "Name: Bob, Age: 56"
+      Inside output_file.txt: "Name: Bob, Age: 56"
 
 ---
 
