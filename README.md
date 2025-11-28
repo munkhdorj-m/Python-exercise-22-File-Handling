@@ -48,16 +48,3 @@ Write a program that reads a text file and prints the number of words in it.
       Output: 6
 
 ---
-
-## Exercise 4
-
-**Problem:**
-
-Write a program that reads a file and prints the longest word.
-
- 
-**Example**
-      
-      Inside sample.txt: "What's the longest word in here?"
-      Output: "longest"
----
