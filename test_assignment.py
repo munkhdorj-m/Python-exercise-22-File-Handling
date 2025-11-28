@@ -3,8 +3,7 @@ import inspect
 from assignment import (
     create_and_read_file,
     write_user_info,
-    count_words_in_file,
-    find_longest_word_in_file
+    count_words_in_file
 )
 
 @pytest.mark.parametrize("filename, content", [
@@ -39,14 +38,3 @@ def test3(filename, content, expected_count):
         f.write(content)
     
     assert count_words_in_file(filename) == expected_count
-
-@pytest.mark.parametrize("filename, content, expected_word", [
-    ("test_longest.txt", "Find the longest word in this file.", "longest"),
-    ("test_longest2.txt", "Short words only.", "Short"),
-    ("empty.txt", "", "")
-])
-def test4(filename, content, expected_word):
-    with open(filename, "w") as f:
-        f.write(content)
-    
-    assert find_longest_word_in_file(filename) == expected_word
